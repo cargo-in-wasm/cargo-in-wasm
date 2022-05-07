@@ -1,0 +1,6 @@
+[submodule "rust"]
+	path = rust
+	url = https://github.com/cargo-in-wasm/rust.git
+[submodule "cargo"]
+	path = cargo
+	url = https://github.com/cargo-in-wasm/cargo.git
