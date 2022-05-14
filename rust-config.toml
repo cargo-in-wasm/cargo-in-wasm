@@ -1,0 +1,27 @@
+changelog-seen = 2
+
+[build]
+host = ["wasm32-wasi"]
+extended = true
+tools = ["cargo", "src"]
+
+[rust]
+lld = false
+
+[llvm]
+clang = true
+ccache = "/usr/bin/ccache"
+
+[target.wasm32-wasi]
+
+cc = "#ROOT_PATH#/wasm32-wasi/bin/clang"
+
+cxx = "#ROOT_PATH#/wasm32-wasi/bin/clang++"
+
+ar = "#ROOT_PATH#/wasm32-wasi/bin/ar"
+
+ranlib = "#ROOT_PATH#/wasm32-wasi/bin/ranlib"
+
+linker = "#ROOT_PATH#/wasm32-wasi/bin/clang"
+
+wasi-root = "#ROOT_PATH#/wasm32-wasi"
