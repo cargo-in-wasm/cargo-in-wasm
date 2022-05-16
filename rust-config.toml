@@ -15,6 +15,9 @@ split-debuginfo = "off"
 clang = true
 ccache = "/usr/bin/ccache"
 
+[llvm.build-config]
+LLVM_ENABLE_THREADS = "OFF"
+
 [target.wasm32-wasi]
 
 cc = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/bin/clang"
