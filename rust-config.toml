@@ -5,6 +5,7 @@ host = ["wasm32-wasi"]
 target = ["wasm32-wasi"]
 extended = true
 tools = ["cargo", "src"]
+#verbose = 2
 
 [rust]
 lld = true
@@ -26,4 +27,4 @@ ranlib = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/bin/ranlib"
 
 linker = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/bin/clang"
 
-wasi-root = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk"
+wasi-root = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/share/wasi-sysroot"
