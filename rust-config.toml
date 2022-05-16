@@ -2,11 +2,13 @@ changelog-seen = 2
 
 [build]
 host = ["wasm32-wasi"]
+target = ["wasm32-wasi"]
 extended = true
 tools = ["cargo", "src"]
 
 [rust]
-lld = false
+lld = true
+split-debuginfo = "off"
 
 [llvm]
 clang = true
@@ -14,14 +16,14 @@ ccache = "/usr/bin/ccache"
 
 [target.wasm32-wasi]
 
-cc = "#ROOT_PATH#/wasm32-wasi/bin/clang"
+cc = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/bin/clang"
 
-cxx = "#ROOT_PATH#/wasm32-wasi/bin/clang++"
+cxx = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/bin/clang++"
 
-ar = "#ROOT_PATH#/wasm32-wasi/bin/ar"
+ar = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/bin/ar"
 
-ranlib = "#ROOT_PATH#/wasm32-wasi/bin/ranlib"
+ranlib = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/bin/ranlib"
 
-linker = "#ROOT_PATH#/wasm32-wasi/bin/clang"
+linker = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk/bin/clang"
 
-wasi-root = "#ROOT_PATH#/wasm32-wasi"
+wasi-root = "#ROOT_PATH#/build/wasi-sdk/build/install/opt/wasi-sdk"
